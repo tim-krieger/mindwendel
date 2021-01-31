@@ -22,4 +22,8 @@ defmodule Mindwendel.Release do
   defp load_app do
     Application.load(@app)
   end
+
+  def run_seeds do
+    Code.eval_file("./priv/repo/seeds.exs")
+  end
 end
