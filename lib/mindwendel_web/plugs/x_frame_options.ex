@@ -7,6 +7,6 @@ defmodule Mindwendel.Plugs.XFrameOptions do
   def init(opts \\ %{}), do: Enum.into(opts, %{})
 
   def call(conn, _opts) do
-    Conn.put_resp_header(conn,"x-frame-options","ALLOW-FROM https://slides.com")
+    Conn.put_resp_header(conn, "x-frame-options", "ALLOW-FROM https://slides.com")
   end
 end
